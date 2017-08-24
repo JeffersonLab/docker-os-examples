@@ -7,9 +7,9 @@ RUN apk update \
     && apk upgrade \
     && apk add \
     	ca-certificates \
-	curl \
+	wget \
     && rm -rf /var/cache/apk/*
 
 RUN cd /usr/local/share/ca-certificates \
-    && curl -sLO http://pki.jlab.org/JLabCA.crt \
+    && wget https://pki.jlab.org/JLabCA.crt \
     && update-ca-certificates
