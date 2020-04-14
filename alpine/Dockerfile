@@ -1,8 +1,5 @@
 FROM alpine:latest
 
-ENV http_proxy=http://jprox.jlab.org:8081 \
-    https_proxy=https://jprox.jlab.org:8081
-
 RUN apk update \
     && apk upgrade \
     && apk add \

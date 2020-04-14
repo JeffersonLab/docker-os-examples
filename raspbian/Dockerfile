@@ -1,8 +1,5 @@
 FROM arm32v7/debian:jessie
 
-ENV http_proxy=http://jprox.jlab.org:8081 \
-    https_proxy=https://jprox.jlab.org:8081
-
 RUN apt-get update && apt-get upgrade \
     && apt-get install -y \
        	curl
